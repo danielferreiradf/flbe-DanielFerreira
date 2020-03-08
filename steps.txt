@@ -3,3 +3,9 @@ installed express and nodemon
 created .gitignore added node_modules
 moved users.csv and item.csv to database folder
 created server.js and routes.js files
+scripts dev and start package.json
+using MVC standard, created folder app and controllers, inside controllers added files searchcontroller, search controllerd has a method searchItems
+routes file contains all routes within the app, imports controllers methods and creates routes using them
+creates route "/search" using method GET
+server.js file created class App that creates the server object using express and intializes methods routes and middlewares.
+creates app instance and then passes it the PORT, checking if there is a environment var(usually within prod env) and if not found, uses port 5000.
