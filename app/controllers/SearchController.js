@@ -11,9 +11,11 @@ class SearchController {
       const loadedItemsFromCSV = await fs.readFile(
         path.join(__dirname, "..", "..", "database/items.csv")
       );
+
       const loadedUsersFromCSV = await fs.readFile(
         path.join(__dirname, "..", "..", "database/users.csv")
       );
+
       const parsedItems = await neatCsv(loadedItemsFromCSV);
       const parsedUsers = await neatCsv(loadedUsersFromCSV);
 

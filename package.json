@@ -1,22 +1,14 @@
 {
-  "name": "fatlama-backend-challenge",
+  "name": "fl-DanielFerreira-be",
   "version": "1.0.0",
-  "description": "Backend Challenge",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js",
     "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/fatlama/backend-challenge.git"
-  },
   "author": "Daniel Ferreira",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/fatlama/backend-challenge/issues"
-  },
-  "homepage": "https://github.com/fatlama/backend-challenge#readme",
   "dependencies": {
     "express": "^4.17.1",
     "neat-csv": "^5.2.0"
