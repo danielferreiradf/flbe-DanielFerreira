@@ -17,7 +17,20 @@ class SearchController {
       const parsedItems = await neatCsv(loadedItemsFromCSV);
       const parsedUsers = await neatCsv(loadedUsersFromCSV);
 
-      return res.json(searchTerm);
+      const filteredItems = parsedItems
+        .filter(item =>
+          item.item_name.toLowerCase().includes(searchTerm.toLowerCase())
+        )
+        .slice(0, 20);
+
+      const filtersItemWithUsers = filteredItems.map(item => {
+        return {
+          ...item,
+          user: parsedUsers.find(user => item.user_id === user.id)
+        };
+      });
+
+      return res.json(filtersItemWithUsers);
     } catch (error) {
       return res.status(500).json({ error: error.message });
     }

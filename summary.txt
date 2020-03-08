@@ -10,3 +10,5 @@ creates route "/search" using method GET
 server.js file created class App that creates the server object using express and intializes methods routes and middlewares.
 creates app instance and then passes it the PORT, checking if there is a environment var(usually within prod env) and if not found, uses port 5000.
 installed neat-csv package to handle csv files
+updated searchItems to load csv files, parse them into javascript objects, filtered them using the searchTerm passed through the query parameter. Sliced them to return just 20 results.
+With the items filtered, added a map go loop over them and find each item owner relating user in item with user_id in users table.
