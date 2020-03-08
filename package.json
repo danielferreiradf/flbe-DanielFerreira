@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/fatlama/backend-challenge#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "neat-csv": "^5.2.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"

@@ -9,3 +9,4 @@ routes file contains all routes within the app, imports controllers methods and 
 creates route "/search" using method GET
 server.js file created class App that creates the server object using express and intializes methods routes and middlewares.
 creates app instance and then passes it the PORT, checking if there is a environment var(usually within prod env) and if not found, uses port 5000.
+installed neat-csv package to handle csv files
