@@ -34,10 +34,19 @@ describe("Search Controller", () => {
     expect(response.status).toBe(200);
   });
 
+  it("call api using GET method with searchTerm not found - Ex: /search?searchTerm=skate", async () => {
+    const response = await request(app)
+      .get("/search")
+      .query({ searchTerm: "skate" });
+
+    expect(response.status).toBe(200);
+    expect(response.body).toHaveLength(0);
+  });
+
   it("call api using GET method with searchTerm returing an array with 20 objects", async () => {
     const response = await request(app)
       .get("/search")
-      .query("searchTerm", searchTerm);
+      .query({ searchTerm });
 
     expect(response.body).toEqual(expect.any(Array));
     expect(response.body).toHaveLength(20);

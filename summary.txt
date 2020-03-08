@@ -12,3 +12,5 @@ creates app instance and then passes it the PORT, checking if there is a environ
 installed neat-csv package to handle csv files
 updated searchItems to load csv files, parse them into javascript objects, filtered them using the searchTerm passed through the query parameter. Sliced them to return just 20 results.
 With the items filtered, added a map go loop over them and find each item owner relating user in item with user_id in users table.
+setup tests suite using jest and supertest, created folder __tests__ with file search.test.js
+added tests to test functionality to parse csv files to javascript objects, call the api end /search using query with searchTerm provided by a mock property and test to check with return data contains 20 results within the array.
