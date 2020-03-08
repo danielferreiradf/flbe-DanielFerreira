@@ -1,0 +1,5 @@
+started project using npm init
+installed express and nodemon
+created .gitignore added node_modules
+moved users.csv and item.csv to database folder
+created server.js and routes.js files
