@@ -25,3 +25,11 @@ variable (usually found within production enviroment) and if it is not found, th
 - Added tests to test the App functionalities, such as parse csv files to javascript array of objects, 
 call the api endpoint "/search" using query with searchTerm provided by a mock property and test to check
  with return data contains 20 results within the array.
+
+ Notes:
+
+ - The challenge requested to use TypeScript. Right now, I am not totally confident to use it, but I know how important it is
+ to secure the application of reducing bugs, having a better code for the team and makes it great to scale the project. Thefore, 
+ I am willing to improve such skills and it is already in my plans to become confident using that.
+ - I used slice to make the endpoint to return only 20 items. But for a production application a better approach is to use pagination,
+ returning all results but limiting the number of them by simulating pages, requested by the frontend.
